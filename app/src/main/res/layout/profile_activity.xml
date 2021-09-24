@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/settingImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_profile_setting"
+        android:layout_marginLeft="@dimen/borderPaddingIcon"
+        app:layout_constraintBottom_toBottomOf="@id/settingText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/settingText" />
+
+    <TextView
+        android:id="@+id/settingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_view_settings"
+        android:textSize="@dimen/textSize"
+        android:layout_marginStart="@dimen/borderPaddingText"
+        android:layout_marginBottom="@dimen/borderPaddingText"
+        android:layout_marginTop="@dimen/borderPaddingTop"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/settingImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/aboutImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_profile_about"
+        android:layout_marginLeft="@dimen/borderPaddingIcon"
+        app:layout_constraintBottom_toBottomOf="@id/aboutText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/aboutText" />
+
+    <TextView
+        android:id="@+id/aboutText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_view_about"
+        android:textSize="@dimen/textSize"
+        android:layout_marginStart="@dimen/borderPaddingText"
+        android:layout_marginBottom="@dimen/borderPaddingText"
+        android:layout_marginTop="@dimen/borderPaddingText"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/aboutImage"
+        app:layout_constraintTop_toTopOf="@id/settingText" />
+
+    <ImageView
+        android:id="@+id/shareImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_profile_share"
+        android:layout_marginLeft="@dimen/borderPaddingIcon"
+        app:layout_constraintBottom_toBottomOf="@id/shareText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/shareText"  />
+
+    <TextView
+        android:id="@+id/shareText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_view_share"
+        android:textSize="@dimen/textSize"
+        android:layout_marginStart="@dimen/borderPaddingText"
+        android:layout_marginBottom="@dimen/borderPaddingText"
+        android:layout_marginTop="@dimen/borderPaddingText"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/shareImage"
+        app:layout_constraintTop_toTopOf="@id/aboutText"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

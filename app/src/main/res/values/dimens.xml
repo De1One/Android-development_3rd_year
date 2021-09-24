@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="borderPaddingText">48dp</dimen>
+    <dimen name="borderPaddingTop">24dp</dimen>
+    <dimen name="borderPaddingIcon">24dp</dimen>
+    <dimen name="textSize">24sp</dimen>
+</resources>
