@@ -17,8 +17,10 @@ class ProfileActivity : AppCompatActivity() {
         binding.settingText.setOnClickListener{
             startActivity(Intent(this,SettingsActivity::class.java))
         }
-        binding.aboutText.setOnClickListener{
-            startActivity(Intent(this, AboutActivity::class.java))
+        binding.aboutText.setOnClickListener {
+            startActivity(
+                AboutActivity.newInstance(this, "https://www.journaldev.com")
+            )
         }
         binding.shareText.setOnClickListener{
             share()
