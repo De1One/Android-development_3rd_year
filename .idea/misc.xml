@@ -6,10 +6,13 @@
         <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.11614583333333334" />
         <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.11614583333333334" />
         <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/layout/about_activity.xml" value="0.11639492753623189" />
-        <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/layout/fragment_events.xml" value="0.12" />
+        <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/layout/fragment_holidays.xml" value="0.1" />
+        <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/layout/profile_activity.xml" value="0.25" />
         <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/layout/settings_activity.xml" value="0.1" />
-        <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
+        <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.33" />
         <entry key="..\:/Users/kwalt/AndroidStudioProjects/App/app/src/main/res/xml/root_preferences.xml" value="0.1" />
       </map>
     </option>

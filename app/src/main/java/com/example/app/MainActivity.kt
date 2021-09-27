@@ -1,11 +1,12 @@
 package com.example.app
 
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.example.app.databinding.ActivityMainBinding
+import com.example.app.fragments.EventsFragment
+import com.example.app.fragments.HolidaysFragment
+import com.example.app.fragments.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,14 +19,23 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigation.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.page_1 ->{
+                R.id.events ->{
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_frame,EventsFragment())
+                        .commit()
                     true
                 }
-                R.id.page_2 ->{
+                R.id.holidays ->{
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_frame,HolidaysFragment())
+                        .commit()
                     true
                 }
                 R.id.profile ->{
-                    startActivity(Intent(this,ProfileActivity::class.java))
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_frame,ProfileFragment())
+                        .commit()
+                    //startActivity(Intent(this,ProfileActivity::class.java))
                     true
                 }
                 else ->{
