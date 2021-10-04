@@ -1,4 +1,4 @@
-package com.example.app.fragments
+package com.example.app.ui.holidays
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.app.R
 
-class ProfileFragment : Fragment() {
+class HolidaysFragment : Fragment(){
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        return inflater.inflate(R.layout.fragment_holidays, container, false)
     }
 }
