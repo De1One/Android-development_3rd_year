@@ -18,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.main_frame,EventsFragment())
+            .commit()
         binding.bottomNavigation.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.events ->{
