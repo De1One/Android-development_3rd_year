@@ -4,4 +4,5 @@
     <dimen name="borderPaddingTop">24dp</dimen>
     <dimen name="borderPaddingIcon">24dp</dimen>
     <dimen name="textSize">24sp</dimen>
+    <dimen name="marginFAB">16dp</dimen>
 </resources>

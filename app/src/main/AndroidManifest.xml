@@ -13,17 +13,11 @@
         <activity
             android:name=".SettingsActivity"
             android:exported="true"
-            android:label="@string/text_view_settings"
-            android:parentActivityName=".ProfileActivity"/>
+            android:label="@string/text_view_settings" />
 
         <activity android:name=".AboutActivity"
             android:exported="true"
-            android:label="@string/text_view_about"
-            android:parentActivityName=".ProfileActivity"/>
-
-        <activity android:name=".ProfileActivity"
-            android:exported="true"
-            android:label="@string/text_label_profile"/>
+            android:label="@string/text_view_about" />
 
         <activity
             android:name="com.example.app.ui.MainActivity"

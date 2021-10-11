@@ -32,7 +32,7 @@ class EventsFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerViewEvents).apply{
+         val recyclerView = binding.recyclerViewEvents.apply{
              adapter = eventsAdapter
              layoutManager = LinearLayoutManager(context)
 
