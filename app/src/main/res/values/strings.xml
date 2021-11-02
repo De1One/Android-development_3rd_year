@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">App</string>
-    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="app_name">Event Reminder</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -28,4 +27,10 @@
     <string name="text_hint_event_title">Event name</string>
     <string name="text_hint_event_desc">Event description</string>
     <string name="text_hint_event_date">Event date</string>
+    
+    <string name= "shareDescription">This app is awesome</string>
+
+    <string name="save">Save</string>
+    <string name="remove">Delete</string>
+    <string name="edit">Edit</string>
 </resources>
