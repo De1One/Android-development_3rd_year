@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.app.domain.model.EventsReminder
 import com.example.app.ui.common.App
 import kotlinx.coroutines.launch
+import java.util.*
 
 class EventEditVM(application: Application) : AndroidViewModel(application) {
 
@@ -23,7 +24,12 @@ class EventEditVM(application: Application) : AndroidViewModel(application) {
             eventReminder = eventReminder.copy(desc = value!!)
         }
     }
-    private val dateStringObs = ObservableField("")
+    val dateStringObs = object : ObservableField<Date>() {
+        override fun set(value: Date?) {
+            super.set(value)
+            eventReminder = eventReminder.copy(dateStart = value!!)
+        }
+    }
     private lateinit var eventReminder: EventsReminder
 
     fun loadData(eventId: Int) {
@@ -33,6 +39,7 @@ class EventEditVM(application: Application) : AndroidViewModel(application) {
             eventReminder.run {
                 titleObs.set(title)
                 descObs.set(desc)
+                dateStringObs.set(dateStart)
             }
         }
     }

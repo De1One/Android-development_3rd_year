@@ -4,12 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.iterator
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.app.R
 import com.example.app.databinding.FragmentEventDescriptionBinding
-import com.example.app.domain.model.EventsReminder
 import com.example.app.ui.common.BaseFragment
 
 
@@ -33,7 +31,8 @@ class EventDescriptionFragment : BaseFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         _binding = FragmentEventDescriptionBinding.inflate(inflater, container, false)
-        // TODO: Привязать EventDescriptionVM к binding
+        // TODO: Привязать EventDescriptionVM к binding +
+        binding.viewmodel = eventDescriptionVM
         return binding.root
     }
 

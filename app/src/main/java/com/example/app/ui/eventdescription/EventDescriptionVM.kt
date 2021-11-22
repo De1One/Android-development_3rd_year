@@ -1,6 +1,7 @@
 package com.example.app.ui.eventdescription
 
 import android.app.Application
+import androidx.databinding.ObservableField
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -17,15 +18,25 @@ class EventDescriptionVM(application: Application) : AndroidViewModel(applicatio
     //TODO: Добавить переменную
     // val titleObs = ObservableField("")
     // var eventReminder: EventReminder? = null
+    private lateinit var eventReminder: EventsReminder
 
+    private val titleObs = object : ObservableField<String>() {
+        override fun set(value: String?) {
+            super.set(value)
+            eventReminder = eventReminder?.copy(title = value!!)
+        }
+    }
     fun loadData(eventId: Int) {
         viewModelScope.launch {
             val event = getApplication<App>().eventReminderRepository.getEventReminder(eventId)
             eventReminderData.value = event
             //TODO Связать данную VM с fragment_event_desc
-
             //TODO Добавить в xml данные о деталях события и дату
             //TODO: Установить значения в переменные titleObs и eventReminder
+            eventReminder = event ?: EventsReminder.emptyEventsReminder()
+            eventReminder?.run{
+                titleObs.set(title)
+            }
         }
     }
 

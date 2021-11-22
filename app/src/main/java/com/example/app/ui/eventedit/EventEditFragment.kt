@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.app.databinding.FragmentNewEventBinding
 import com.example.app.ui.common.BaseFragment
+import com.google.android.material.datepicker.MaterialDatePicker
+import java.util.*
 
 class EventEditFragment : BaseFragment() {
 
@@ -50,9 +52,20 @@ class EventEditFragment : BaseFragment() {
         }
     }
     private fun initDatePicker() {
-        //TODO Добавить реализацию datePicker https://material.io/components/date-pickers/android
-
+        //TODO Добавить реализацию datePicker https://material.io/components/date-pickers/androi
         //TODO Сохранить выбранную дату в ViewModel
+        val datePicker =
+            MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Select date")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .build()
+        fragmentManager?.let{
+            datePicker.show(it,"")
+        }
+        //TODO Сохранить выбранную дату в ViewModel
+        datePicker.addOnPositiveButtonClickListener() {
+            eventEditVM.dateStringObs.set(Date(it))
+        }
     }
 
     override fun onDestroyView() {
